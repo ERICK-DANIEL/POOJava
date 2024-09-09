@@ -6,11 +6,13 @@ public class PromedioPonderado {
     Scanner input;
     float promedio;
     int experiencias;
-    int totalCreditos = 0;
-    int suma = 0;
+    int totalCreditos;
+    int suma;
 
     public PromedioPonderado() {
         input = new Scanner(System.in);
+        suma = 0;
+        totalCreditos = 0;
     }
 
     public void escaner() {
@@ -23,7 +25,7 @@ public class PromedioPonderado {
         for(int i = 0;  i < experiencias; i++) {
             System.out.printf("Ingrese los creditos de la experiencia %d: ", i + 1);
             Creditos[i] = input.nextInt();
-
+            
             System.out.printf("Ingrese la calificacion de la experiencia %d: ", i + 1);
             Calificaciones[i] = input.nextInt();
         }
